@@ -1,6 +1,6 @@
 import MovieDetails from 'pages/MovieDetails/MovieDetails'
 import React from 'react'
-import { Link, Route, Routes, useLocation, useParams } from 'react-router-dom'
+import { Link, Route, Routes, useLocation } from 'react-router-dom'
 import css from "./PopularyMoviesList.module.css"
 
 const PopularyMoviesList = ({data}) => {
