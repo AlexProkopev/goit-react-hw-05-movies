@@ -44,6 +44,10 @@ const MovieDetails = () => {
     fetchMovies();
   }, [currentMovies]);
 
+  const defaultImg =
+  'https://rgo.ru/upload/content_block/images/9ca8302358b777e143cd6e314058266b/7065323d0aa2e3fa6e8764c4f57f1655.jpg?itok=sawvdjq3';
+
+
   return (
     <div>
       <Link to={locationBack.current} className={css.linkCastRewievs}>
@@ -54,11 +58,21 @@ const MovieDetails = () => {
       {isError && <h4>Ошибка сервера</h4>}
 
       <div className={css.wrapperMovie}>
-        <img
+      {/* <img
           className={css.imgPoster}
           src={'https://image.tmdb.org/t/p/w500' + movie.poster_path}
           alt=""
-        />
+        /> */}
+
+           <img
+                className={css.imgRewievs}
+              src={
+                movie.poster_path
+                  ? 'https://image.tmdb.org/t/p/w500' + movie.poster_path
+                  : defaultImg
+              }
+              alt=""
+            />
         <h2 className={css.title}>{movie.original_title}</h2>
         <p className={css.description}>{movie.overview}</p>
       </div>

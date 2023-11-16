@@ -46,10 +46,13 @@ const Reviews = () => {
     {isError && <h4>Ошибка сервера</h4>}
     {rewievs.length > 0 ? <h2 className={css.title}>Rewievs</h2> : <h2 className={css.title}>Пока что отзывов нет</h2>}
     <div className={css.wrapperRewievs}>
+
+
       
       {rewievs.map(rewiev => {
+        const numberId = Math.floor(Math.random() * 1000000000);
         return (
-         <div className={css.wrapperCard}>
+         <div className={css.wrapperCard} key={numberId}>
         <img
                 className={css.imgRewievs}
               src={
