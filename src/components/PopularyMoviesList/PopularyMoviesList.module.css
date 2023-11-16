@@ -1,0 +1,21 @@
+.linkPopulary {
+    
+        display: block;
+        text-decoration: none;
+        padding: 10px;
+        border: 1px solid black;
+        width: 120px;
+       
+        text-align: center;
+        border-radius: 5px;
+        color: black;
+        transition: 250ms linear;
+        background-color: burlywood;
+    
+}
+
+.linkPopulary:hover,
+.linkPopulary:focus {
+    background-color: blueviolet;
+    color: white;
+}

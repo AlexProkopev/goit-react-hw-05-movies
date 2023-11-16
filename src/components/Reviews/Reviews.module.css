@@ -1,0 +1,32 @@
+.wrapperRewievs {
+    display:  flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 20px;
+   
+}
+
+.wrapperCard {
+   
+    
+    width: 300px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid white;
+}
+
+.imgRewievs {
+    max-width: 100%;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.spanName,.spanRewiev {
+    font-weight: 500;
+}

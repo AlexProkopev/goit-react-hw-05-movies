@@ -1,0 +1,33 @@
+.imgCast {
+    
+    max-width: 450px;
+    height: 350px;
+    border-radius: 5px;
+}
+
+.wrapperCast {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 30px;
+}
+
+.wrapperCardCast {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: coral;
+    border-radius: 5px;
+}
+
+.titleCast {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}

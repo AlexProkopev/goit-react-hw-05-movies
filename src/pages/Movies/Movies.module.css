@@ -1,0 +1,61 @@
+.wraperSearch {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+
+}
+
+.inputSearch {
+    border: none;
+    height: 30px;
+    width: 300px;
+    border: none;
+    border-radius: 8px;
+    padding-left: 15px;
+}
+
+.inputSearch:focus {
+   
+    border: 1px solid #460707;
+}
+
+.btnSubmit {
+    margin-left: 30px;
+padding: 7px;
+border: none;
+border-radius: 8px;
+}
+
+.btnSubmit:hover {
+    cursor: pointer;
+}
+
+.linkPopulary {
+    
+    display: block;
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid black;
+    width: 120px;
+   
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    transition: 250ms linear;
+    background-color: burlywood;
+
+}
+
+.linkPopulary:hover,
+.linkPopulary:focus {
+background-color: blueviolet;
+color: white;
+}
+
+.listPopulary {
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

@@ -1,0 +1,13 @@
+.listPopulary {
+    gap: 15px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.title {
+    text-align: center;
+    margin-top: 20px;
+    
+}
