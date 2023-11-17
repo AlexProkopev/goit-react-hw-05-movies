@@ -10,10 +10,10 @@ const PopularyMoviesList = ({data}) => {
     
   return (
     <>
-    {data.map(movie=>{
+    { data !== null && data.map(({id,original_title})=>{
         return (
-            <li key={movie.id}>
-                <Link to={`/movies/${movie.id}`} state={{from : location}} className={css.linkPopulary}>{movie.original_title}</Link>
+            <li key={id}>
+                <Link to={`/movies/${id}`} state={{from : location}} className={css.linkPopulary}>{original_title}</Link>
             </li>
         )
     })}
