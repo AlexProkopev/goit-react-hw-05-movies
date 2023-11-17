@@ -44,7 +44,13 @@ const Movies = () => {
   const submit = e => {
     e.preventDefault();
 
-    const value = e.currentTarget.elements.search.value;
+    const value = e.currentTarget.elements.search.value.trim();
+    
+    if (value === "") {
+      alert("Не может быть пустой строкой")
+      return
+    }
+
     setSearchParams({ query: value });
 
     setValueSearch(value);

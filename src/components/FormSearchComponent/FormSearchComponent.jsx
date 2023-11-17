@@ -9,6 +9,7 @@ const FormSearchComponent = ({submit}) => {
           type="text"
           placeholder="Начните поиск"
           name="search"
+          required
         />
         <button type="submit" className={css.btnSubmit}>
           Поиск
