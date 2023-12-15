@@ -1,0 +1,19 @@
+.imgPoster {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    height: 400px;
+}
+
+.title {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.description {
+    color: blue;
+    width: 550px;
+    margin: 0 auto;
+}

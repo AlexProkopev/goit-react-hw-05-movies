@@ -1,4 +1,4 @@
-.linkPopulary {
+/* .linkPopulary {
     
         display: block;
         text-decoration: none;
@@ -17,5 +17,63 @@
 .linkPopulary:hover,
 .linkPopulary:focus {
     background-color: blueviolet;
+    color: white;
+}
+
+.imgPoster {
+    max-width: 100%;
+    height: auto;
+}
+
+.linkContainer {
+    padding: 5px 15px;
+}
+
+.originalName {
+    margin-top: 100px;
+} */
+
+.linkContainer {
+    padding: 5px 15px;
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 8px;
+    transition: 250ms linear;
+}
+
+.linkContainer:hover,
+.linkContainer:focus {
+    transform: scale(110%);
+}
+
+
+
+.imgPoster {
+    max-width: 100%;
+    height: auto;
+}
+
+.linkPopulary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.originalName {
+  margin-top: 10px;
+  text-align: center;
+  
+} 
+
+.linkPopulary {
+    color: black;
+    transition: 250ms linear;
+     color: darkblue;
+     text-decoration: none;
+}
+
+.linkPopulary:hover,
+.linkPopulary:focus {
     color: white;
 }

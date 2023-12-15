@@ -10,6 +10,9 @@ const Home = () => {
     const [isError, setIsError] = useState(false)
     const [movies, setMovies] = useState(null)
     const searchString = "https://api.themoviedb.org/3/movie/popular?api_key=e9b50bda4ce56f3b360f447ed6508c77"
+    
+
+
 
    useEffect(() => {
         fetchMovies(setisLoading,setMovies,setIsError,searchString)
