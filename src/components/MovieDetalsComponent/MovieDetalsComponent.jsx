@@ -3,6 +3,7 @@ import css from "./MovieDetailsComponent.module.css"
 import { defaultImgHome } from 'services/defaultImg'
 
 const MovieDetalsComponent = ({movie}) => {
+  console.log(movie.genres);
   return (
     <>
          <img
@@ -19,14 +20,18 @@ const MovieDetalsComponent = ({movie}) => {
         <p className={css.description}>{movie.overview}</p>
         <h2 className={css.descripTitle}>Rating:</h2>
         <p className={css.description}>{movie.vote_average}</p>
-        <h2 className={css.descripTitle}>Genre:</h2>
-        <p className={css.description}>
-          {movie.length !== 0 &&
-            movie.genres.map((el, index) => (
-              <span key={index} className={css.spanMap}> {el.name}. 
-              </span>
-            ))}
-        </p>
+        { movie.genres !== undefined && movie.genres.length > 0 && 
+          <>
+          <h2 className={css.descripTitle}>Genre:</h2>
+          <p className={css.description}>
+            {movie.length !== 0 &&
+              movie.genres.map((el, index) => (
+                <span key={index} className={css.spanMap}> {el.name}. 
+                </span>
+              ))}
+          </p>
+          </>
+        }
     </>
   )
 }
