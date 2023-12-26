@@ -10,13 +10,16 @@ const Layout = ({ children }) => {
         <NavLink className={css.linkPage} to="/">
           Home
         </NavLink>
+        <NavLink to="/upcoming-movies" className={css.linkPage}>
+        Upcoming 
+        </NavLink>
         <NavLink to="/movies" className={css.linkPage}>
           Search movies
         </NavLink>
       </header>
       <main className={css.mainContent}>{children}</main>
 
-      <footer className={css.footerContainer}>
+      <footer id='footer' className={css.footerContainer}>
         <Footer />
       </footer>
     </div>

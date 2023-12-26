@@ -3,6 +3,7 @@ import css from './App.module.css';
 import { Suspense, lazy } from 'react';
 import Layout from './Layout/Layout';
 import Loader from './Loader/Loader';
+import UpcomingMovies from 'pages/UpcomingMovies/UpcomingMovies';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
@@ -18,6 +19,7 @@ export const App = () => {
             <Route path="/*" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
             <Route path="/movies/:movieId/*" element={<MovieDetails />} />
+            <Route path="/upcoming-movies" element={<UpcomingMovies />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>

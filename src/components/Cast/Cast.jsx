@@ -5,6 +5,8 @@ import css from './Cast.module.css';
 import Loader from 'components/Loader/Loader';
 import { defaultImgHome } from 'services/defaultImg';
 import ScrollBtn from 'components/ScrollBtn/ScrollBtn';
+import ScrollBtnUp from 'components/ScrollBtnUp/ScrollBtnUp';
+import ScrollBtnDown from 'components/ScrollBtnDown/ScrollBtnDown';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -30,12 +32,17 @@ const Cast = () => {
     fetchMovies();
   }, [currentMovies]);
 
+ 
+
+
   return (
     <>
       <ScrollBtn />
+      {movie.length > 30 && <ScrollBtnDown />}
       {isLoading && <Loader />}
       {isError && <h4>Server error</h4>}
       <h2 className={css.titleCast}>Cast</h2>
+     {!movie.length && <h2 className={css.titleCast}>No cast found</h2>}
       <ul className={css.wrapperCast}>
         {movie.map(cast => {
           return (
@@ -57,6 +64,7 @@ const Cast = () => {
           );
         })}
       </ul>
+    {movie.length > 30 && <ScrollBtnUp />}
       <NavLink className={css.btnHide} to={location.state.from.pathname}>
         Hide
       </NavLink>
