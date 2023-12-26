@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
+
+
+
+.wrapperFooterContacts {
+  padding-bottom: 40px;
+  margin-top: 20px;
+}
+
+
+
+.title,
+.contacts {
+  font-family: 'Preahvihear', sans-serif;
+  color: white;
+  font-size: 20px;
+}
+
+.listContacts {
+  margin: 30px;
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
+
+.linkContact {
+  font-family: 'Preahvihear', sans-serif;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid black;
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  color: white;
+  transition: 250ms linear;
+}
+
+.linkContact:hover,
+.linkContact:focus {
+  color: rgb(0, 17, 255);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.decorName {
+  text-decoration: underline;
+}

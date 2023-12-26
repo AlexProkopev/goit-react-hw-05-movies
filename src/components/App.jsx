@@ -9,6 +9,7 @@ const Movies = lazy(() => import('pages/Movies/Movies'));
 const MovieDetails = lazy(() => import('pages/MovieDetails/MovieDetails'));
 
 export const App = () => {
+  
   return (
     <div className={css.container}>
       <Layout>

@@ -1,32 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
+
+
 .wrapperRewievs {
-    display:  flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 20px;
-   
+
 }
 
 .wrapperCard {
-   
-    
-    width: 300px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    border: 1px solid white;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border: 1px solid white;
+  margin-bottom: 30px;
+  border-radius: 10px;
 }
 
+
+
 .imgRewievs {
-    max-width: 100%;
-    height: auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.wrapperUser {
+margin-top: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+gap: 10px;
 }
 
 .title {
-    text-align: center;
+  font-family:"Montserrat",sans-serif ;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 
-.spanName,.spanRewiev {
-    font-weight: 500;
+.titleName {
+    font-family: "Preahvihear",sans-serif;
+}
+
+.spanName,
+.spanRewiev {
+  font-weight: 500;
+}
+
+.content {
+    font-family: "Preahvihear",sans-serif;
+    color: white;
+}
+
+.btnHide {
+    font-family: "Preahvihear",sans-serif;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
 }

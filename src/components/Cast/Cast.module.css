@@ -1,33 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
+
 .imgCast {
-    
-    max-width: 450px;
-    height: 350px;
-    border-radius: 5px;
+  max-width: 100%;
+  height: 280px;
+}
+
+.linkContainer {
+  padding: 5px 15px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: 250ms linear;
+}
+
+.linkContainer:hover,
+.linkContainer:focus {
+  transform: scale(110%);
+  border: 1px solid rgb(255, 255, 255);
 }
 
 .wrapperCast {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 10px;
-    margin-top: 30px;
-}
-
-.wrapperCardCast {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid white;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    background-color: coral;
-    border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .titleCast {
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-    margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.btnHide {
+  margin-top: 20px;
+  font-family: "Preahvihear",sans-serif;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
 }

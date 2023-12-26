@@ -1,47 +1,69 @@
-.wrapperMovie{
-    width: 600px;
-    margin: 0 auto;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
+
+.wrapperMovie {
+  width: 600px;
+  margin: 0 auto;
 }
 
 .imgPoster {
-    display: block;
-    margin: 0 auto;
-    width: 300px;
-    height: 400px;
+  display: block;
+  margin: 0 auto;
+  width: 300px;
+  height: 400px;
 }
 
-
+.goBackBtn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 125px;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid white;
+  text-decoration: none;
+  padding: 10px;
+  text-align: start;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  transition: 250ms linear;
+}
 
 .linkCastRewievs {
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid black;
-    width: 120px;
-   
-    text-align: center;
-    border-radius: 5px;
-    color: black;
-    transition: 250ms linear;
-    background-color: burlywood;
+  font-family: 'Preahvihear', sans-serif;
+  display: block;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  width: 120px;
+  text-align: center;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  transition: 250ms linear;
+  
+}
+
+.goBackBtn:hover {
+  color: white;
+  transform: translate(0,-3px);
+  box-shadow: 0 20px 40px 0 rgba(11, 99, 246, 1);
 }
 
 .linkCastRewievs:hover {
-    background-color: blueviolet;
-    color: white;
+  background-color: blueviolet;
+  color: white;
 }
 
- .wrapperLink {
-    display: flex;
-    justify-content: space-between;
-} 
-
-:global .MovieDetails_linkCastRewievs__ACbxb.active {
-    background-color: black;
-    color: white;
+.wrapperLink {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 .spanMap {
-    margin-left: 10px;
+  margin-left: 10px;
 }
+
 

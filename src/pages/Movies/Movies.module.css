@@ -1,31 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
 
+.startSerchTitle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: 'Preahvihear', sans-serif;
+  color: white;
+  font-size: 20px;
+  justify-content: center;
+}
+
+
+
+.linkContainer {
+  padding: 5px 15px;
+  width: 200px;
+  border: 1px solid black;
+  border-radius: 8px;
+  transition: 250ms linear;
+}
+
+.linkContainer:hover,
+.linkContainer:focus {
+  transform: scale(110%);
+  border: 1px solid rgb(255, 255, 255);
+}
+
+.listPopulary {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.imgPoster {
+  max-width: 100%;
+  height: 280px;
+}
 
 .linkPopulary {
-    
-    display: block;
-    text-decoration: none;
-    padding: 10px;
-    border: 1px solid black;
-    width: 120px;
-   
-    text-align: center;
-    border-radius: 5px;
-    color: black;
-    transition: 250ms linear;
-    background-color: burlywood;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px;
+}
 
+.originalName {
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+.linkPopulary {
+  color: black;
+  transition: 250ms linear;
+  color: darkblue;
+  text-decoration: none;
 }
 
 .linkPopulary:hover,
 .linkPopulary:focus {
-background-color: blueviolet;
-color: white;
-}
-
-.listPopulary {
-    gap: 15px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  color: white;
 }

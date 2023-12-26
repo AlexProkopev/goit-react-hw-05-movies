@@ -1,22 +1,26 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
-import css from "./Layout.module.css"
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import css from './Layout.module.css';
+import Footer from 'components/Footer/Footer';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
-    <div>
+    <div className={css.wrapper}>
+      <header className={css.wrapHeader}>
+        <NavLink className={css.linkPage} to="/">
+          Home
+        </NavLink>
+        <NavLink to="/movies" className={css.linkPage}>
+          Search movies
+        </NavLink>
+      </header>
+      <main className={css.mainContent}>{children}</main>
 
-<header className={css.wrapHeader}>
-     <NavLink className={css.linkPage} to="/">Главная</NavLink>
-     <NavLink to="/movies" className={css.linkPage} >Поиск фильмов</NavLink>
-
-</header>
-<main>
-    {children}
-</main>
-     
+      <footer className={css.footerContainer}>
+        <Footer />
+      </footer>
     </div>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

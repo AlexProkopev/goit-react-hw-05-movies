@@ -1,13 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
+
 .listPopulary {
-    gap: 30px;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
 }
 
 .title {
-    text-align: center;
-    margin-top: 20px;
-    
+  font-family: 'Preahvihear', sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 30px;
 }
