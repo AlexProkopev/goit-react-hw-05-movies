@@ -61,5 +61,10 @@
     justify-content: space-between;
 }
 
-
+.titleVideo {
+    font-family: "Montserrat",sans-serif;
+    margin-top: 40px;
+    text-align: center;
+    color: white;
+}
 

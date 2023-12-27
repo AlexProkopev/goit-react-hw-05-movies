@@ -13,6 +13,9 @@ const Layout = ({ children }) => {
         <NavLink to="/upcoming-movies" className={css.linkPage}>
         Upcoming 
         </NavLink>
+        <NavLink to="/in-cinemas" className={css.linkPage}>
+        In Cinemas 
+        </NavLink>
         <NavLink to="/movies" className={css.linkPage}>
           Search movies
         </NavLink>

@@ -1,6 +1,7 @@
 import React from 'react'
 import css from "./MovieDetailsComponent.module.css"
 import { defaultImgHome } from 'services/defaultImg'
+import VideoPlayer from 'components/VideoPlayer/VideoPlayer'
 
 const MovieDetalsComponent = ({movie}) => {
   return (
@@ -31,6 +32,8 @@ const MovieDetalsComponent = ({movie}) => {
                 </span>
               ))}
           </p>
+          <h2 className={css.titleVideo} >Trailer</h2>
+          <VideoPlayer movieId={movie.id}/>
           </>
         }
     </>
