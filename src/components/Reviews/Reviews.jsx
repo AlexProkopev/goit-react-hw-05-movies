@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import { NavLink, useLocation, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import css from './Reviews.module.css';
 import Notiflix from 'notiflix';
 import Loader from 'components/Loader/Loader';
@@ -12,7 +12,7 @@ const Reviews = () => {
   const [rewievs, setRewievs] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
-  const location = useLocation()
+  
   const currentMovies = `https://api.themoviedb.org/3/movie/${movieId}/reviews?language=en-US&api_key=e9b50bda4ce56f3b360f447ed6508c77`;
 
   useEffect(() => {
@@ -65,7 +65,6 @@ const Reviews = () => {
           );
         })}
       </ul>
-      <NavLink to={location.state.from.pathname} className={css.btnHide}> Hide</NavLink>
     </>
   );
 };

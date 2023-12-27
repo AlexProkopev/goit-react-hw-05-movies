@@ -12,7 +12,6 @@ import { fetchDetails } from 'services/fetchDetails';
 import MovieDetalsComponent from 'components/MovieDetalsComponent/MovieDetalsComponent';
 import IconGoBack from 'components/IconGoBack/IconGoBack';
 
-
 const Cast = lazy(() => import('components/Cast/Cast'));
 const Reviews = lazy(() => import('components/Reviews/Reviews'));
 const Loader = lazy(() => import('components/Loader/Loader'));
@@ -22,17 +21,29 @@ const MovieDetails = () => {
   const [movie, setMovie] = useState([]);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isReviewsVisible, setIsReviewsVisible] = useState(false);
   const location = useLocation();
   const locationBack = useRef(location.state?.from ?? '/');
   const currentMovies = `https://api.themoviedb.org/3/movie/${movieId}?api_key=e9b50bda4ce56f3b360f447ed6508c77`;
 
-console.log(location);
- 
   useEffect(() => {
     fetchDetails(setisLoading, setMovie, setIsError, currentMovies);
+    return () => {
+      setIsReviewsVisible(false);
+      setIsVisible(false);
+    };
   }, [setMovie, currentMovies]);
 
+  const toggleCastVisibility = () => {
+    setIsReviewsVisible(false);
+    setIsVisible(!isVisible);
+  };
 
+  const toggleReviewsVisibility = () => {
+    setIsReviewsVisible(!isReviewsVisible);
+    setIsVisible(false);
+  };
 
   return (
     <section>
@@ -40,23 +51,33 @@ console.log(location);
         <IconGoBack /> Go back
       </Link>
       {isLoading && <Loader />}
-      {isError && <h4>Ошибка сервера</h4>}
+      {isError && <h4>Server Error</h4>}
       <div className={css.wrapperMovie}>
-        <MovieDetalsComponent movie={movie}/>
+        <MovieDetalsComponent movie={movie} />
       </div>
       <div className={css.wrapperLink}>
-        <NavLink to="cast" className={css.linkCastRewievs}  state={{ from: location }}>
+        <NavLink
+          to="cast"
+          className={css.linkCastRewievs}
+          state={{ from: location }}
+          onClick={toggleCastVisibility}
+        >
           Cast
         </NavLink>
-        <NavLink to="rewievs" className={css.linkCastRewievs} state={{ from: location }}>
+        <NavLink
+          to="rewievs"
+          className={css.linkCastRewievs}
+          state={{ from: location }}
+          onClick={toggleReviewsVisibility}
+        >
           Rewievs
         </NavLink>
       </div>
       <>
         <Suspense fallback={<Loader />}>
           <Routes>
-            <Route path="cast" element={<Cast />} />
-            <Route path="rewievs" element={<Reviews  />} />
+            {isVisible && <Route path="cast" element={<Cast />} />}
+            {isReviewsVisible && <Route path="rewievs" element={<Reviews />} />}
           </Routes>
         </Suspense>
       </>

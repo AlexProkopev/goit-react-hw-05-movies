@@ -29,6 +29,21 @@
   list-style: none;
 }
 
+.titleCastName,
+.titleCastCharacter {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+}
+
+.titleCastCharacter  {
+  font-family:"Preahvihear", sans-serif;
+
+}
+
 .titleCast {
   font-family: 'Montserrat', sans-serif;
   text-align: center;
