@@ -1,5 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
-import { Link, useLocation, useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useLocation} from 'react-router-dom';
 import { fetchUpcoming } from 'services/fetchUpcoming';
 import css from './UpcomingMovies.module.css';
 import { defaultImgHome } from 'services/defaultImg';
