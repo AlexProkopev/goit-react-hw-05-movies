@@ -31,8 +31,10 @@ const InCinemasList = ({ id,
               />
              <div className={css.contentWrapper}>
              <h2 className={css.titleCinemas}>{original_title}</h2>
-              <p className={css.text}>{release_date}</p>
-              <p className={css.text}>Will start showing <span>{ vote_average}</span></p>
+              
+              <p className={css.text}>Will start showing:</p>
+              <span  className={css.text}>{ release_date}</span>
+              <p className={css.text}>Rating: {vote_average}</p>   
              </div>
             </Link>
           </li>
