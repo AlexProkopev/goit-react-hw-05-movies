@@ -45,6 +45,10 @@ gap: 10px;
 
 .titleName {
     font-family: "Preahvihear",sans-serif;
+    width: 140px;
+    white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .spanName,
