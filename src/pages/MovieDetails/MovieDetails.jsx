@@ -76,7 +76,7 @@ const MovieDetails = () => {
       <>
         <Suspense fallback={<Loader />}>
           <Routes>
-            {isVisible && <Route path="cast" element={<Cast />} />}
+            {isVisible && <Route path="cast/*" element={<Cast />} />}
             {isReviewsVisible && <Route path="rewievs" element={<Reviews />} />}
           </Routes>
         </Suspense>

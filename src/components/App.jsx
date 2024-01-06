@@ -5,6 +5,7 @@ import Layout from './Layout/Layout';
 import Loader from './Loader/Loader';
 import UpcomingMovies from 'pages/UpcomingMovies/UpcomingMovies';
 import {InСinemas} from 'pages/InСinemas/InСinemas';
+import CastDetails from 'pages/CastDetails/CastDetails';
 
 const Home = lazy(() => import('pages/Home/Home'));
 const Movies = lazy(() => import('pages/Movies/Movies'));
@@ -25,6 +26,7 @@ export const App = () => {
             <Route path="/upcoming-movies/:movieId/*" element={<MovieDetails />} />
             <Route path="/in-cinemas" element={<InСinemas/>} />
             <Route path="/in-cinemas/:movieId/*" element={<MovieDetails />} />
+            <Route path="/cast-details"element= {<CastDetails />} />
             <Route path="*" element={<Home />} />
           </Routes>
         </Suspense>
