@@ -5,8 +5,7 @@ import { fetchDetails } from 'services/fetchDetails';
 import css from './CastDetails.module.css';
 import MoviesWithActor from 'components/MoviesWithActor/MoviesWithActor';
 import Loader from 'components/Loader/Loader';
-import ScrollBtnDown from 'components/ScrollBtnDown/ScrollBtnDown';
-import ScrollBtnUp from 'components/ScrollBtnUp/ScrollBtnUp';
+
 
 const CastDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -56,11 +55,8 @@ const CastDetails = () => {
           <p className={css.descriptions}>{castDetails.place_of_birth}</p>
 
           <h2 className={css.title}>Films with this actor</h2>
-          {movieWithActor !==null && movieWithActor.cast.length > 20 && <ScrollBtnDown />}
-          <ul className={css.listPopulary}>
-            <MoviesWithActor movies={movieWithActor} />
-          </ul>
-          {movieWithActor !==null && movieWithActor.cast.length > 20 && <ScrollBtnUp/>}
+
+          <MoviesWithActor movies={movieWithActor} />
         </div>
       )}
     </section>
