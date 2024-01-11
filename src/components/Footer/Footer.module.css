@@ -1,13 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
 
-
-
 .wrapperFooterContacts {
   padding-bottom: 40px;
   margin-top: 20px;
 }
-
-
 
 .title,
 .contacts {
@@ -44,4 +40,62 @@
 
 .decorName {
   text-decoration: underline;
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .wrapperFooterContacts {
+    padding-top: 40px;
+  }
+
+  .wrapperFooter {
+    align-self: flex-start;
+    margin-top: 55px;
+  }
+  .title {
+    
+    text-align: start;
+    font-size: 40px;
+  }
+  .contacts {
+    font-size: 40px;
+  }
+
+  .listContacts {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .linkContact {
+    width: 200px;
+    font-size: 35px;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .wrapperFooterContacts {
+    padding-top: 40px;
+  }
+
+  .wrapperFooter {
+    align-self: flex-start;
+    margin-top: 55px;
+  }
+  .title {
+    
+    font-size: 50px;
+  }
+  .contacts {
+    font-size: 50px;
+  }
+
+  .listContacts {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .linkContact {
+    width: 250px;
+    font-size: 40px;
+    padding: 20px 10px;
+  }
 }

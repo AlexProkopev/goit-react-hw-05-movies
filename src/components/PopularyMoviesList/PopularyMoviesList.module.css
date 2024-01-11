@@ -1,11 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
 
 .linkContainer {
-  padding: 5px 15px;
+  padding: 15px 15px;
   width: 200px;
   border: 1px solid black;
   border-radius: 8px;
   transition: 250ms linear;
+  box-shadow: -9px 2px 26px -2px rgba(34, 60, 80, 0.2);
 }
 
 .linkContainer:hover,
@@ -44,4 +45,32 @@
 .linkPopulary:hover,
 .linkPopulary:focus {
   color: white;
+}
+
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .linkContainer {
+    width: 300px;
+  }
+
+  .originalName {
+    font-size: 28px;
+    margin-top: 15px; 
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .linkContainer {
+    padding: 10px 20px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 2px;
+    
+  }
+
+  .originalName {
+    font-size: 40px;
+    margin-top: 15px; 
+  }
+  
 }

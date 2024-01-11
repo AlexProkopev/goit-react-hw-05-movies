@@ -1,6 +1,7 @@
 import React from 'react'
 import css from './Footer.module.css'
 
+
 const Footer = () => {
   return (
     <>
@@ -16,6 +17,7 @@ const Footer = () => {
         <li className={css.itemContats}><a href="tel:4550321254" target="_blank" rel='noreferrer' className={css.linkContact}>Viber</a></li>
       </ul>
      </div>
+    
     </>
   )
 }

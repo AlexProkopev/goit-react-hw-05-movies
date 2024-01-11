@@ -4,6 +4,7 @@ import css from './Home.module.css';
 import Loader from 'components/Loader/Loader';
 import { fetchMovies } from 'services/fetchMovie';
 
+
 const Home = () => {
   const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -17,12 +18,14 @@ const Home = () => {
 
   return (
     <section>
-      <h1 className={css.title}>Popular today</h1>
+     <div className={css.container}>
+     <h1 className={css.title}>Popular today</h1>
       {isLoading && <Loader />}
       {isError && <h4>Errore</h4>}
       <ul className={css.listPopulary}>
         <PopularyMoviesList data={movies} />
       </ul>
+     </div>
     </section>
   );
 };
