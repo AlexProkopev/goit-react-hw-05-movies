@@ -15,7 +15,6 @@ export const App = () => {
   
   return (
     <div className={css.container}>
-      
       <Layout>
         <Suspense fallback={<Loader />}>
           <Routes>

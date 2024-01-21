@@ -7,6 +7,7 @@ const Layout = ({ children }) => {
   return (
     <div className={css.wrapper}>
       <header className={css.wrapHeader}>
+       
         <NavLink className={css.linkPage} to="/">
           Home
         </NavLink>
@@ -19,8 +20,12 @@ const Layout = ({ children }) => {
         <NavLink to="/movies" className={css.linkPage}>
           Search movies
         </NavLink>
+        
       </header>
-      <main className={css.mainContent}>{children}</main>
+
+      <main className={css.mainContent}>
+     {children}
+      </main>
 
       <footer id='footer' className={css.footerContainer}>
         <Footer />

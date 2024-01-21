@@ -1,14 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  row-gap: 30px;
-  min-height: 100vh;
-}
+
 
 .mainContent {
-  flex-grow: 1;
+margin: 0 auto;
 }
 
 .linkPage {
@@ -31,14 +26,16 @@
 }
 
 .wrapHeader {
-  width: 800px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 40px;
+  margin-bottom: 30px;
 }
 
 .footerContainer {
+
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -48,38 +45,50 @@
   padding-right: 20px;
   margin-top: auto;
   text-align: center;
+  margin-top: 30px;
+  border-radius: 8px;
 }
 
 .active {
   background-color: black;
 }
 
-
-@media screen and (min-width: 600px) and (max-width: 1024px) {
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  
   .linkPage {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     padding: 10px 40px;
     border: 1px solid black;
     width: 100%;
     font-size: 25px;
-    /* width: calc(50%);  */
+    
+
   }
+  .wrapper {
+
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
 
   .wrapHeader {
     padding-top: 20px;
-    width: 1055px;
     margin: 0 auto;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     gap: 10px;
-    margin-top: 40px;
-    
+    margin-top: 10px;
+    margin-bottom: 15px;
   }
 }
 
 @media screen and (max-width: 599px) {
+  .wrapper {
+
+    padding-right: 15px;
+    padding-left: 15px;
+  }
   .linkPage {
     display: flex;
     justify-content: center;
@@ -88,16 +97,17 @@
     width: 300px;
     font-size: 45px;
     font-weight: 700;
-    
   }
 
   .wrapHeader {
     padding-top: 20px;
-    width: 800px;
-    flex-direction:row;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     margin-top: 40px;
+   margin-bottom: 20px;
   }
 
   .footerContainer {

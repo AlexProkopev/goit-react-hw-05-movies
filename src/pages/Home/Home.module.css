@@ -1,13 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&family=Preahvihear&display=swap');
 
-
+.container {
+  width: 1280px;
+  margin-right: auto;
+  margin-left: auto;
+  
+}
 
 .listPopulary {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 25px;
-  margin: 0 auto;
   padding: 0;
   list-style: none;
 }
@@ -19,11 +23,27 @@
   margin-bottom: 30px;
 }
 
-
 @media screen and (max-width: 599px) {
-  .listPopulary {
-  gap: 100px;
-    
+  .container {
+    width: 100%;
+    padding-right: 10px;
+    padding-left: 10px;
   }
-  
+
+  .listPopulary {
+    gap: 10px;
+    overflow-x: hidden;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .listPopulary {
+    gap: 20px; /* Пример: увеличьте gap для планшетов */
+    overflow-x: hidden;
+  }
 }

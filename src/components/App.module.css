@@ -1,8 +1,7 @@
 .container {
-    min-width: 1200px;
-    margin: 0 auto;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 1280px;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .wrapHeader {
@@ -12,3 +11,21 @@
     margin-top: 40px;
     
 }
+
+
+@media screen and (min-width: 600px) and (max-width: 1199px) {
+   .container {
+    width: 100%;
+ 
+   }
+  }
+  
+  @media screen and (max-width: 599px) {
+ 
+    .container {
+        max-width: 599px;
+     
+       }
+  
+  }
+  
