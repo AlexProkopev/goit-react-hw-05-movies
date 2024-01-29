@@ -23,8 +23,9 @@ const theme = createTheme({
 export const App = () => {
   
   return (
-    // <ThemeProvider theme={theme}>
+    
     <div className={css.container}>
+      <ThemeProvider theme={theme}>
       <Layout>
         <Suspense fallback={<Loader />}>
           <Routes>
@@ -42,7 +43,8 @@ export const App = () => {
           </Routes>
         </Suspense>
       </Layout>
+      </ThemeProvider>
     </div>
-    // </ThemeProvider>
+    
   );
 };

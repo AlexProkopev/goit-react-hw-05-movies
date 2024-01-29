@@ -1,6 +1,6 @@
 import FilmsByGenre from 'components/FilmsByGenre/FilmsByGenre';
 import GenersListBtn from 'components/GenersListBtn/GenersListCheckbox'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import css from "./Geners.module.css"
 
 const Geners = () => {
