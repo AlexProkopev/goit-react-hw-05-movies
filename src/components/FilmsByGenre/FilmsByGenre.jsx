@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { defaultImgHome } from 'services/defaultImg';
 import { fetchDetails } from 'services/fetchDetails';
-import css from "./FilmsByGenre.module.css"
+import css from './FilmsByGenre.module.css';
 import Loader from 'components/Loader/Loader';
 import PaginationBtnBefore from 'components/PaginationBtn/PaginationBtnBefore';
 import PaginationBtnNext from 'components/PaginationBtn/PaginationBtnNext';
@@ -17,7 +17,6 @@ const FilmsByGenre = ({ idSearch }) => {
   const location = useLocation();
   const currentStringURI = `https://api.themoviedb.org/3/discover/movie?api_key=e9b50bda4ce56f3b360f447ed6508c77&language=en-US&sort_by=popularity.desc&include_adult=false&page=${page}&with_genres=${idSearch}`;
 
-
   useEffect(() => {
     fetchDetails(setIsLoading, setFilms, setIsError, currentStringURI);
 
@@ -26,7 +25,7 @@ const FilmsByGenre = ({ idSearch }) => {
     };
   }, [currentStringURI]);
 
-  const handleChangePageNext = ()=> {
+  const handleChangePageNext = () => {
     setPage(page => page + 1);
   };
 
@@ -34,18 +33,21 @@ const FilmsByGenre = ({ idSearch }) => {
     setPage(page => page - 1);
   };
 
-
   return (
     <>
-    {isError && <p>Error</p>}
-    {isLoading && <Loader/>}
-    <ScrollBtnDown/>
+      {isError && <p>Error</p>}
+      {isLoading && <Loader />}
+      <ScrollBtnDown />
       <ul className={css.listGenreMovie}>
         {films !== null &&
           films.results.map(({ id, poster_path, title }) => {
             return (
               <li key={id} className={css.itemMovieList}>
-                <Link to={`/geners/${id}` } state={{ from: location }} className={css.linkMovieGenre}>
+                <Link
+                  to={`/geners/${id}`}
+                  state={{ from: location }}
+                  className={css.linkMovieGenre}
+                >
                   <img
                     width="300"
                     height="300"
@@ -64,14 +66,16 @@ const FilmsByGenre = ({ idSearch }) => {
           })}
       </ul>
       <div className={css.wrapperPaginationBtn}>
-      {films !== null && films.page !== 1 && (
-        <PaginationBtnBefore handleChangePageBefore={handleChangePageBefore}/>
-      )}
-      {films !== null && films.page !== films.total_pages && (
-        <PaginationBtnNext handleChangePageNext={handleChangePageNext}/>
-      )}
+        {films !== null && films.page !== 1 && (
+          <PaginationBtnBefore
+            handleChangePageBefore={handleChangePageBefore}
+          />
+        )}
+        {films !== null && films.page !== films.total_pages && (
+          <PaginationBtnNext handleChangePageNext={handleChangePageNext} />
+        )}
       </div>
-      {!isLoading && <ScrollBtnUp/>}
+      {!isLoading && <ScrollBtnUp />}
     </>
   );
 };

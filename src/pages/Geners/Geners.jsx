@@ -1,28 +1,23 @@
 import FilmsByGenre from 'components/FilmsByGenre/FilmsByGenre';
-import GenersListBtn from 'components/GenersListBtn/GenersListCheckbox'
-import React, { useState } from 'react'
-import css from "./Geners.module.css"
+import GenersListBtn from 'components/GenersListBtn/GenersListCheckbox';
+import React, { useState } from 'react';
+import css from './Geners.module.css';
 
 const Geners = () => {
+  const [geners, setGeners] = useState('');
 
-    const [geners, setGeners] = useState("")
-
-  const handleDataFromChild = (data) => {
-    setGeners(data)
+  const handleDataFromChild = data => {
+    setGeners(data);
   };
 
-  console.log(geners);
-
-  
-    
   return (
     <section>
-       <div className={css.container}>
-       <GenersListBtn idFromChild={handleDataFromChild}/>
-        <FilmsByGenre idSearch={geners}/>
-       </div>
+      <div className={css.container}>
+        <GenersListBtn idFromChild={handleDataFromChild} />
+        <FilmsByGenre idSearch={geners} />
+      </div>
     </section>
-  )
-}
+  );
+};
 
-export default Geners
+export default Geners;

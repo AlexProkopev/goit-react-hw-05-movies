@@ -4,7 +4,6 @@
   width: 1280px;
   margin-right: auto;
   margin-left: auto;
-  
 }
 
 .listPopulary {
@@ -44,7 +43,7 @@
   }
 
   .listPopulary {
-    gap: 20px; 
+    gap: 20px;
     overflow-x: hidden;
   }
 }
