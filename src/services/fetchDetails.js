@@ -1,20 +1,18 @@
 import axios from 'axios';
 
 export const fetchDetails = async (
-  setisLoadin,
-  setMovieDetails,
-  setIsErro,
-  currentMovie
+  setisLoading,
+  setUseState,
+  setIsError,
+  currentStringURI,
 ) => {
   try {
-    setisLoadin(true);
-
-    const response = await axios.get(currentMovie);
-
-    setMovieDetails(response.data);
+    setisLoading(true);
+    const response = await axios.get(currentStringURI);
+    setUseState(response.data);
   } catch (error) {
-    setIsErro(error.mesage);
+    setIsError(error.mesage);
   } finally {
-    setisLoadin(false);
+    setisLoading(false);
   }
 };

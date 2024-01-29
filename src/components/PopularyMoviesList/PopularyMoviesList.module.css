@@ -25,17 +25,6 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 5px;
-}
-
-.originalName {
-  font-family: 'Preahvihear', sans-serif;
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
-  color: white;
-}
-
-.linkPopulary {
   color: black;
   transition: 250ms linear;
   color: darkblue;
@@ -46,6 +35,16 @@
 .linkPopulary:focus {
   color: white;
 }
+
+.originalName {
+  font-family: 'Preahvihear', sans-serif;
+  font-size: 18px;
+  margin-top: 10px;
+  text-align: center;
+  color: white;
+}
+
+
 
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {

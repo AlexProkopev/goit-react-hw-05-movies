@@ -8,9 +8,7 @@ export const fetchUpcoming = async (
 ) => {
   try {
     setisLoading(true);
-
     const {data} = await axios.get(searchString);
-
     setMovies(data.results);
     setIsError(false);
   } catch (error) {

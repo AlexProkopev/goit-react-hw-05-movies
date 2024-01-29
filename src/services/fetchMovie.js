@@ -8,9 +8,7 @@ export const fetchMovies = async (
 ) => {
   try {
     setisLoadin(true);
-
     const response = await axios.get(searchString);
-
     setMovie(response.data.results);
     setIsErro(false);
   } catch (error) {

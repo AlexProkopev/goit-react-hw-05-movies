@@ -3,6 +3,8 @@ import React, { useEffect, useState } from 'react';
 import css from './Home.module.css';
 import Loader from 'components/Loader/Loader';
 import { fetchMovies } from 'services/fetchMovie';
+import ScrollBtnDown from 'components/ScrollBtnDown/ScrollBtnDown';
+import ScrollBtnUp from 'components/ScrollBtnUp/ScrollBtnUp';
 
 
 const Home = () => {
@@ -22,9 +24,11 @@ const Home = () => {
      <h1 className={css.title}>Popular today</h1>
       {isLoading && <Loader />}
       {isError && <h4>Errore</h4>}
+      <ScrollBtnDown/>
       <ul className={css.listPopulary}>
         <PopularyMoviesList data={movies} />
       </ul>
+      <ScrollBtnUp/>
      </div>
     </section>
   );

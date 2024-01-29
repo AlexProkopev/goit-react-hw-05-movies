@@ -20,6 +20,9 @@ const Layout = ({ children }) => {
         <NavLink to="/movies" className={css.linkPage}>
           Search movies
         </NavLink>
+        <NavLink to="/geners" className={css.linkPage}>
+          Geners
+        </NavLink>
         
       </header>
 
