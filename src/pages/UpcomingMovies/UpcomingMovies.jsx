@@ -34,7 +34,6 @@ const UpcomingMovies = () => {
             original_title,
             overview,
             release_date,
-            vote_average,
           }) => {
             return (
               <li key={id} className={css.linkContainer}>

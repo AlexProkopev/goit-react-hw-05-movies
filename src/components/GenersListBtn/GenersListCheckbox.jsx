@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { fetchDetails } from 'services/fetchDetails';
 import "./GenersListCheckbox.css"
-import { RadioGroup, Radio, FormControlLabel, createTheme } from '@mui/material';
+import { RadioGroup, Radio, FormControlLabel } from '@mui/material';
 import Loader from 'components/Loader/Loader';
 
 

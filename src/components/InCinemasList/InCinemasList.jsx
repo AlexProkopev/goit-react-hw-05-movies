@@ -7,7 +7,6 @@ const InCinemasList = ({
   id,
   poster_path,
   original_title,
-  overview,
   release_date,
   vote_average,
 }) => {

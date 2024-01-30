@@ -1,18 +1,19 @@
-import React from 'react'
-import css from "./ScrollBtnDown.module.css"
+import React from 'react';
+import css from './ScrollBtnDown.module.css';
 
 const ScrollBtnDown = () => {
+  const scrollHandler = () => {
+    window.scrollBy({
+      top: document.documentElement.scrollHeight - window.innerHeight,
+      behavior: 'smooth',
+    });
+  };
 
-    const scrollHandler = () => {
-        window.scrollBy({
-          top: document.documentElement.scrollHeight - window.innerHeight,
-          behavior: 'smooth',
-        });
-    };
-    
   return (
-    <button type="button" className={css.scrollBtn} onClick={scrollHandler}>Down </button>
-  )
-}
+    <button type="button" className={css.scrollBtn} onClick={scrollHandler}>
+      Down{' '}
+    </button>
+  );
+};
 
-export default ScrollBtnDown
+export default ScrollBtnDown;

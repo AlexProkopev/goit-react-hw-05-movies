@@ -1,17 +1,19 @@
-import React from 'react'
-import css from "./ScrollBtnUp.module.css"
+import React from 'react';
+import css from './ScrollBtnUp.module.css';
 
 const scrollUpHandler = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth',
-    });
-  };
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
 
 const ScrollBtnUp = () => {
   return (
-    <button type="button" className={css.scrollBtn} onClick={scrollUpHandler}>Up </button>
-  )
-}
+    <button type="button" className={css.scrollBtn} onClick={scrollUpHandler}>
+      Up{' '}
+    </button>
+  );
+};
 
-export default ScrollBtnUp
+export default ScrollBtnUp;

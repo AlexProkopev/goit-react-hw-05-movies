@@ -82,7 +82,7 @@ const Movies = () => {
           </Link>
         </li>
       );
-    }); // Результат поиска фильмов
+    });
 
   return (
     <section>
