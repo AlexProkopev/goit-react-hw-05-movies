@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import css from './Geners.module.css';
 
 const Geners = () => {
-  const [geners, setGeners] = useState('');
+  const [geners, setGeners] = useState('28');
 
   const handleDataFromChild = data => {
     setGeners(data);

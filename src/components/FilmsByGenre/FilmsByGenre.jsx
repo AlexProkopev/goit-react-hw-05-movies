@@ -8,6 +8,7 @@ import PaginationBtnBefore from 'components/PaginationBtn/PaginationBtnBefore';
 import PaginationBtnNext from 'components/PaginationBtn/PaginationBtnNext';
 import ScrollBtnDown from 'components/ScrollBtnDown/ScrollBtnDown';
 import ScrollBtnUp from 'components/ScrollBtnUp/ScrollBtnUp';
+import { handleChangePageBefore, handleChangePageNext } from 'components/PaginationBtn/changePage';
 
 const FilmsByGenre = ({ idSearch }) => {
   const [films, setFilms] = useState(null);
@@ -25,13 +26,6 @@ const FilmsByGenre = ({ idSearch }) => {
     };
   }, [currentStringURI]);
 
-  const handleChangePageNext = () => {
-    setPage(page => page + 1);
-  };
-
-  const handleChangePageBefore = () => {
-    setPage(page => page - 1);
-  };
 
   return (
     <>
@@ -68,11 +62,11 @@ const FilmsByGenre = ({ idSearch }) => {
       <div className={css.wrapperPaginationBtn}>
         {films !== null && films.page !== 1 && (
           <PaginationBtnBefore
-            handleChangePageBefore={handleChangePageBefore}
+            handleChangePageBefore={()=> handleChangePageBefore(setPage)}
           />
         )}
         {films !== null && films.page !== films.total_pages && (
-          <PaginationBtnNext handleChangePageNext={handleChangePageNext} />
+          <PaginationBtnNext handleChangePageNext={()=> handleChangePageNext(setPage)} />
         )}
       </div>
       {!isLoading && <ScrollBtnUp />}

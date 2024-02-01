@@ -2,6 +2,8 @@ import React from 'react'
 import css from "./PaginationBtnBefore.module.css"
 
 const PaginationBtnBefore = ({handleChangePageBefore}) => {
+  
+
   return (
     <button type="button"onClick={()=>{handleChangePageBefore()
         window.scrollTo({

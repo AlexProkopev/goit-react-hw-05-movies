@@ -1,19 +1,20 @@
 import Loader from 'components/Loader/Loader';
 import React, { useEffect, useState } from 'react';
-import { fetchMovies } from 'services/fetchMovie';
+
 import css from "./VideoPlayer.module.css"
+import { fetchDetails } from 'services/fetchDetails';
 
 const VideoPlayer = ({ movieId }) => {
-  const [videos, setVideos] = useState([]);
+  const [videos, setVideos] = useState(null);
   const [isLoading, setisLoading] = useState(false);
   const [isError, setIsError] = useState(false);
   const currentMovies = `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=e9b50bda4ce56f3b360f447ed6508c77`;
 
   useEffect(() => {
-    fetchMovies(setisLoading, setVideos, setIsError, currentMovies);
+    fetchDetails(setisLoading, setVideos, setIsError, currentMovies);
   }, [currentMovies]);
 
-  const officialTrailer = videos.find(({ name }) => name === "Official Trailer");
+  const officialTrailer = videos !== null && videos.results.find(({ name }) => name === "Official Trailer");
   const hasTrailer = officialTrailer !== undefined;
 
   return (

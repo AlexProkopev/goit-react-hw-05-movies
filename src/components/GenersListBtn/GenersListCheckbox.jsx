@@ -23,7 +23,7 @@ const GenersListBtn = ({idFromChild}) => {
     const handleChangeGeners = (e) => {
        setSelectedGenre(e.target.value)
        idFromChild(e.target.value) 
-
+      
        
     }
   return (

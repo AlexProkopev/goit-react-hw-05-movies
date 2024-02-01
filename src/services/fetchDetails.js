@@ -10,6 +10,7 @@ export const fetchDetails = async (
     setisLoading(true);
     const response = await axios.get(currentStringURI);
     setUseState(response.data);
+    setIsError(false);
   } catch (error) {
     setIsError(error.mesage);
   } finally {

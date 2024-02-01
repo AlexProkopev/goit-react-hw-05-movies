@@ -4,21 +4,23 @@ import { Link, Route, Routes, useLocation } from 'react-router-dom';
 import css from './PopularyMoviesList.module.css';
 import { defaultImgHome } from 'services/defaultImg';
 
+const {linkContainer,linkPopulary,imgPoster,originalName} = css
+
 const PopularyMoviesList = ({ data }) => {
   const location = useLocation();
   return (
     <>
       {data !== null &&
-        data.map(({ id, original_title, poster_path }) => {
+        data.results.map(({ id, original_title, poster_path }) => {
           return (
-            <li key={id} className={css.linkContainer}>
+            <li key={id} className={linkContainer}>
               <Link
                 to={`/movies/${id}`}
                 state={{ from: location }}
-                className={css.linkPopulary}
+                className={linkPopulary}
               >
                 <img
-                  className={css.imgPoster}
+                  className={imgPoster}
                   src={
                     poster_path
                       ? 'https://image.tmdb.org/t/p/w500' + poster_path
@@ -26,7 +28,7 @@ const PopularyMoviesList = ({ data }) => {
                   }
                   alt="Img Poster for Movie"
                 />
-                <span className={css.originalName}>{original_title}</span>
+                <span className={originalName}>{original_title}</span>
               </Link>
             </li>
           );
