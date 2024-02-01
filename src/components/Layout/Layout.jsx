@@ -7,15 +7,14 @@ const Layout = ({ children }) => {
   return (
     <div className={css.wrapper}>
       <header className={css.wrapHeader}>
-       
         <NavLink className={css.linkPage} to="/">
           Home
         </NavLink>
         <NavLink to="/upcoming-movies" className={css.linkPage}>
-        Upcoming 
+          Upcoming
         </NavLink>
         <NavLink to="/in-cinemas" className={css.linkPage}>
-        In Cinemas 
+          In Cinemas
         </NavLink>
         <NavLink to="/movies" className={css.linkPage}>
           Search movies
@@ -23,14 +22,11 @@ const Layout = ({ children }) => {
         <NavLink to="/geners" className={css.linkPage}>
           Geners
         </NavLink>
-        
       </header>
 
-      <main className={css.mainContent}>
-     {children}
-      </main>
+      <main className={css.mainContent}>{children}</main>
 
-      <footer id='footer' className={css.footerContainer}>
+      <footer id="footer" className={css.footerContainer}>
         <Footer />
       </footer>
     </div>

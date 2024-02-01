@@ -6,7 +6,6 @@ import css from './CastDetails.module.css';
 import MoviesWithActor from 'components/MoviesWithActor/MoviesWithActor';
 import Loader from 'components/Loader/Loader';
 
-
 const CastDetails = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
@@ -19,7 +18,6 @@ const CastDetails = () => {
 
   useEffect(() => {
     const actorId = state || query;
-
     const searchString = `https://api.themoviedb.org/3/person/${actorId}?api_key=e9b50bda4ce56f3b360f447ed6508c77`;
     const searchMovieWithActor = `https://api.themoviedb.org/3/person/${actorId}/movie_credits?api_key=e9b50bda4ce56f3b360f447ed6508c77`;
 

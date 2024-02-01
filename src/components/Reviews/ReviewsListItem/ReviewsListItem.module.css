@@ -1,0 +1,42 @@
+.wrapperCard {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    border: 1px solid white;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  
+  
+  
+  .imgRewievs {
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+  }
+  
+  .wrapperUser {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+  gap: 10px;
+  }
+
+  .titleName {
+    font-family: "Preahvihear",sans-serif;
+    width: 140px;
+    white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content {
+    font-family: "Preahvihear",sans-serif;
+    color: white;
+}

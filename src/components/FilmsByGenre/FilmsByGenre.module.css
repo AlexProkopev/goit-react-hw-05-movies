@@ -8,73 +8,14 @@
   margin-top: 20px;
 }
 
-.itemMovieList {
-    display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 15px 15px;
-  width: 300px;
- 
-  border-radius: 8px;
-  transition: 250ms linear;
-  box-shadow: -9px 2px 26px -2px rgba(34, 60, 80, 0.2);
-}
-
-.itemMovieList:hover,
-.itemMovieList:focus {
-  transform: scale(110%);
-  
-}
-
-.linkMovieGenre {
-    
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  color: black;
-  transition: 250ms linear;
-  color: darkblue;
-  text-decoration: none;
-}
-
-.linkMovieGenre:hover,
-.linkMovieGenre:focus {
-  color: white;
-}
-
-.imgPoster {
-  max-width: 100%;
-  height: auto;
-}
-
-.titleMovie {
-  font-family: 'Preahvihear', sans-serif;
-  font-size: 18px;
-  margin-top: 10px;
-  text-align: center;
-  color: white;
-}
-
 .wrapperPaginationBtn {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 @media screen and (min-width: 600px) and (max-width: 1024px) {
-  .itemMovieList {
-    width: 300px;
-  }
-
-  .titleMovie {
-    font-size: 28px;
-    margin-top: 15px;
-  }
-
   .wrapperPaginationBtn {
     justify-content: space-around;
   }
@@ -82,23 +23,7 @@
 
 @media screen and (max-width: 599px) {
   .listGenreMovie {
-    
-    gap: 20px; 
+    gap: 20px;
     overflow-x: hidden;
-  }
-
-  .itemMovieList {
-    flex-basis: calc(50% - 10px);
-  }
-
-  .linkMovieGenre {
-    padding: 10px 20px;
-    width: 300px;
-    border-radius: 2px;
-  }
-
-  .titleMovie {
-    font-size: 20px;
-    margin-top: 15px;
   }
 }
